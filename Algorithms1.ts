@@ -27,3 +27,30 @@ const factorial2 = (n: number): number => {
   }
   return factorial2(n - 1) * n
 }
+
+// Prime Check/Primality Test
+// From Vishwas Video 9 - Big-O = O(n)
+function isPrime(n: number) {
+  if (n < 2) {
+    return false
+  }
+  /** Replace `i < n` with `i <= Math.sqrt(n)` for better performance below
+   **  Big-O will become O(sqrt(n))
+   */
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false
+    }
+  }
+  return true
+}
+// Mine - Big-O = O(n^2)
+const primeCheck = (n: number): boolean => {
+  if (n < 2) return false
+  for (let i = 2; i < n; i++) {
+    for (let j = 2; j < n; j++) {
+      if (i * j === n) return false
+    }
+  }
+  return true
+}
