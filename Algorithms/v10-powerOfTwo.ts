@@ -35,19 +35,28 @@ function isPowerOfTwo2(n: number) {
   return true
 }
 
-console.log(isPowerOfTwo2(0), 0)
-console.log(isPowerOfTwo2(1), 1)
-console.log(isPowerOfTwo2(2), 2)
-console.log(isPowerOfTwo2(3), 3)
-console.log(isPowerOfTwo2(4), 4)
-console.log(isPowerOfTwo2(6), 6)
-console.log(isPowerOfTwo2(8), 8)
-console.log(isPowerOfTwo2(10), 10)
-console.log(isPowerOfTwo2(12), 12)
-console.log(isPowerOfTwo2(16), 16)
-console.log(isPowerOfTwo2(32), 32)
-console.log(isPowerOfTwo2(128), 128)
-console.log(isPowerOfTwo2(257), 257)
-console.log(isPowerOfTwo2(2097152), 2097152)
-console.log(isPowerOfTwo2(4194304), 4194304)
-console.log(isPowerOfTwo2(4194306), 4194306)
+// Vikash's optimized solution
+// Couldn't undestand this just writing it down
+function isPowerOfTwo3(n: number) {
+  if (n < 1) {
+    return false
+  }
+  return (n & (n - 1)) === 0
+}
+
+console.log(isPowerOfTwo3(0), 0)
+console.log(isPowerOfTwo3(1), 1)
+console.log(isPowerOfTwo3(2), 2)
+console.log(isPowerOfTwo3(3), 3)
+console.log(isPowerOfTwo3(4), 4)
+console.log(isPowerOfTwo3(6), 6)
+console.log(isPowerOfTwo3(8), 8)
+console.log(isPowerOfTwo3(10), 10)
+console.log(isPowerOfTwo3(12), 12)
+console.log(isPowerOfTwo3(16), 16)
+console.log(isPowerOfTwo3(32), 32)
+console.log(isPowerOfTwo3(128), 128)
+console.log(isPowerOfTwo3(257), 257)
+console.log(isPowerOfTwo3(2097152), 2097152)
+console.log(isPowerOfTwo3(4194304), 4194304)
+console.log(isPowerOfTwo3(4194306), 4194306)
